@@ -3,7 +3,7 @@ package DSA;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BinarySearch1 {
+public class BinarySearchMethod {
     public static int binarySearch(int[] arr, int low, int high, int searchElement) {
         while (low <= high) {
             int mid = (low + high) / 2;
