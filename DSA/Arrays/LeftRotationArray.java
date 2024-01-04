@@ -8,6 +8,9 @@ import java.util.Scanner;
 
 public class LeftRotationArray {
     public static void rotateArray(int[] arr, int n, int k){
+        // if k is greater than size of array.
+        k = k % n;
+        
         // this will reverse the starting k elements in array.
         reverseArray(arr, 0, k-1);                // ["3, 2, 1", 4, 5, 6, 7]
         // this will reverse the last n-k elements in array.
