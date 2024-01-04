@@ -6,15 +6,16 @@ package DSA.Arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class RightRotateArray {
+public class RightRotationArray {
     public static void rotateArray(int[] arr, int n, int k){
         // this will reverse the last k elements in array.
-        reverseArray(arr, n-k, n-1);            // [1, 2, 3, 4, "7, 6, 5"]
+        reverseArray(arr, n-k, n-1);                // [1, 2, 3, 4, "7, 6, 5"]
         // this will reverse the starting n-k elements in array.
-        reverseArray(arr, 0, n-k-1);      // ["4, 3, 2, 1", 7, 6, 5]
+        reverseArray(arr, 0, n-k-1);          // ["4, 3, 2, 1", 7, 6, 5]
         // this will reverse all the elements in array.
-        reverseArray(arr, 0, n-1);        // [5, 6, 7, 1, 2, 3, 4]
+        reverseArray(arr, 0, n-1);            // [5, 6, 7, 1, 2, 3, 4]
     }
+
     public static void reverseArray(int[] arr, int start, int end){
         int index1=start, index2=end;
         while (index1<index2) {
@@ -23,6 +24,7 @@ public class RightRotateArray {
             index2--;
         }
     }
+
     public static void swap(int[] arr, int index1, int index2){
         int temp = arr[index1];
         arr[index1] = arr[index2];
