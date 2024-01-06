@@ -3,29 +3,36 @@ package DSA.SearchingAlgorithms;
 import java.util.Scanner;
 
 public class LinearSearch {
-    public static void main(String[] args){
-        try(Scanner sc = new Scanner(System.in)) {
-            System.out.println("Enter size of array: ");
-            int size = sc.nextInt();
-            int[] array = new int[size];
-            System.out.println("Enter elements of the array: ");
-            for(int i=0; i<size; i++){
-                array[i] = sc.nextInt();
-            }
-            if(sc.hasNextInt()) {
-                System.out.println("Enter element you want to search: ");
-                int searchElement = sc.nextInt();
-                for(int n : array) {
-                    if (n == searchElement) {
-                        System.out.println("Element is present in the array");
-                        return;
-                    }
-                }
-                System.out.println("Element is not present in the array");
-            } else {
-                System.out.println("Invalid input! Please enter an integer");
-            }
-            sc.close();
+     public static int linearSearch(int[] arr, int size, int target) {
+        if (size == 0) {
+            return -1;
         }
+        for (int index = 0; index < size; index++) {
+            if (arr[index] == target) {
+                return index;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of an array: ");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        System.out.println("Enter the elements of the array: ");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("Enter the element you want to search: ");
+        int target = sc.nextInt();
+
+        int result = linearSearch(arr, size, target);
+        if (result == -1) {
+            System.out.println("Element is not present in the array");
+        } else {
+            System.out.println("Element is present at index: " + result);
+        }
+        sc.close();
     }
 }
