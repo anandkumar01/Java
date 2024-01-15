@@ -23,7 +23,7 @@ public class NextGreaterElement {
                 start = mid + 1;
             }
         }
-        return start; // if while loop condition voilates means answer is next start.
+        return start; // if while loop condition violates means answer is next start.
     }
 
     public static void main(String[] args) {
