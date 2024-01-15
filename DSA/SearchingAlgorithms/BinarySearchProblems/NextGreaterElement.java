@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class NextGreaterElement {
     public static int binarySearch(int[] arr, int target) {
         int start = 0, end = arr.length - 1;
-        if (target >= arr[end]) {
+        if (target > arr[end]) {
             return -1;
         }
         while (start <= end) {
