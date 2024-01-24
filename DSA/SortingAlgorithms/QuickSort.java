@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class QuickSort {
 
     public static int partition(int[] arr, int low, int high) {
-        int pivote = arr[high];
+        int pivot = arr[high];
         int i = (low - 1);
         for (int j = low; j <= high - 1; j++) {
-            if (arr[j] <= pivote) {
+            if (arr[j] <= pivot) {
                 i++;
                 // swap arr[i] and arr[j]
                 swap(arr, i, j);
