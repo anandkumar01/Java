@@ -5,12 +5,25 @@ package DSA.BasicProgram;
 import java.util.Scanner;
 
 public class PrimeNumber {
+
+    // public static boolean isPrime(int n) {
+    // if (n < 2) {
+    // return false;
+    // }
+    // for (int c = 2; c * c <= n; c++) {
+    // if (n % c == 0) {
+    // return false;
+    // }
+    // }
+    // return true;
+    // }
+
     public static boolean isPrime(int n) {
-        if (n < 2) {
+        if (n <= 1) {
             return false;
         }
-        for(int c=2; c*c <= n; c++) {
-            if (n % c == 0) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
                 return false;
             }
         }
