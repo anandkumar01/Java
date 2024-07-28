@@ -5,6 +5,7 @@ package DSA.BasicProgram;
 import java.util.Scanner;
 
 public class PrintPrimeNumber {
+    
     public static boolean isPrime(int n) {
         if (n < 2) {
             return false;
