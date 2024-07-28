@@ -31,7 +31,7 @@ public class PrintPrimeNumber {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the lower number: ");
         int lower = sc.nextInt();
-        System.out.println("Enter the upper number:");
+        System.out.println("Enter the upper number: ");
         int upper = sc.nextInt();
         printPrimeNumber(lower, upper);
         sc.close();
