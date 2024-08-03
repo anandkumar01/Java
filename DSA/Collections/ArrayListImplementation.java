@@ -6,6 +6,7 @@ import java.util.List;
 
 public class ArrayListImplementation {
     public static void main(String[] args) {
+        // Create an ArrayList
         List<String> list = new ArrayList<>();
         boolean empty = list.isEmpty();
         System.out.println("ArrayList is empty: " + empty);
