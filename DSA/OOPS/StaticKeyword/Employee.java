@@ -4,6 +4,7 @@ public class Employee {
     private String name;
     private String projectName;
     
+    // Static instance variable doesn't dependent on objects
     public static int noOfEmployee = 0;
 
     public Employee(String name, String projectName){
