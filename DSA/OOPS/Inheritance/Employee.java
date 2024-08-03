@@ -6,6 +6,7 @@ public class Employee {
     private int salary;
     private String company;
     
+    // Constructor for Employee
     public Employee(String name, int salary, String company){
         this.name = name;
         this.salary = salary;
