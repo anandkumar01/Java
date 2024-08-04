@@ -1,6 +1,6 @@
 // Sorting the numbers based on their last digit.
 
-package DSA.Collections;
+package DSA.Collections.Comparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
