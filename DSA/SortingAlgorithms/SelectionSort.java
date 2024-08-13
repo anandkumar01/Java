@@ -6,30 +6,42 @@ import java.util.Scanner;
 public class SelectionSort {
     public static int[] selectionSort(int[] arr, int size) {
         for (int i = 0; i < size; i++) {
-            for (int j = i + 1; j < size; j++) {
-                if (arr[i] > arr[j]) {
-                    // swap arr[i] and arr[j]
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
+            int last_index = size - i - 1;
+            int max_index = getMaxIndex(arr, 0, last_index);
+            swap(arr, max_index, last_index);
         }
         return arr;
     }
 
-    public static void main(String[] args) {
-        try (Scanner sc = new Scanner(System.in)) {
-            System.out.println("Enter the size of the array: ");
-            int size = sc.nextInt();
-            int arr[] = new int[size];
-            System.out.println("Enter elements of the array: ");
-            for (int i = 0; i < size; i++) {
-                arr[i] = sc.nextInt();
+    // Method to find the index of maximum element
+    public static int getMaxIndex(int[] arr, int start, int end) {
+        int max_index = start;
+        for (int i = start; i <= end; i++) {
+            if (arr[i] > arr[max_index]) {
+                max_index = i;
             }
-            System.out.println("The unsorted array is: " + Arrays.toString(arr));
-            int result[] = selectionSort(arr, size);
-            System.out.print("The sorted array is: " + Arrays.toString(result));
         }
+        return max_index;
+    }
+
+    public static void swap(int[] arr, int start, int end) {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array: ");
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+        System.out.println("Enter elements of the array: ");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println("The unsorted array is: " + Arrays.toString(arr));
+        int result[] = selectionSort(arr, size);
+        System.out.print("The sorted array is: " + Arrays.toString(result));
+        sc.close();
     }
 }
