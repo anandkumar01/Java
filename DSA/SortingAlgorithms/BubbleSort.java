@@ -30,17 +30,17 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) throws Exception {
-        try (Scanner sc = new Scanner(System.in)) {
-            System.out.println("Enter the size of the array: ");
-            int size = sc.nextInt();
-            int arr[] = new int[size];
-            System.out.println("Enter elements of the array: ");
-            for (int i = 0; i < size; i++) {
-                arr[i] = sc.nextInt();
-            }
-            System.out.println("The unsorted array is: " + Arrays.toString(arr));
-            int result[] = bubbleSort(arr, size);
-            System.out.print("The sorted array is: " + Arrays.toString(result));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array: ");
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+        System.out.println("Enter elements of the array: ");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
         }
+        System.out.println("The unsorted array is: " + Arrays.toString(arr));
+        int result[] = bubbleSort(arr, size);
+        System.out.print("The sorted array is: " + Arrays.toString(result));
+        sc.close();
     }
 }
