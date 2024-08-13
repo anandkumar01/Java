@@ -24,10 +24,10 @@ public class SelectionSort {
         return max_index;
     }
 
-    public static void swap(int[] arr, int start, int end) {
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
+    public static void swap(int[] arr, int index1, int index2) {
+        int temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
     }
 
     public static void main(String[] args) {
