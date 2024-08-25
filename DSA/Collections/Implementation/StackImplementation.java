@@ -1,4 +1,4 @@
-package DSA.Collections;
+package DSA.Collections.Implementation;
 
 import java.util.Stack;
 
