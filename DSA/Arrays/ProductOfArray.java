@@ -1,4 +1,4 @@
-// Statement: Write a program to return an array of product of all integers except itself.
+// Statement: Write a program to return the product of all integers of the array except itself.
 
 package DSA.Arrays;
 
