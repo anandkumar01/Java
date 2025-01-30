@@ -26,8 +26,30 @@ public class LongestCommonPrefix {
         return prefix;
     }
 
-    // Using sorting
+    // Using character by charecter matching
     public static String longestCommonPrefix2(String[] str) {
+        if (str.length == 0 || str == null) {
+            return "";
+        }
+        StringBuilder res = new StringBuilder();
+        int minLen = str[0].length();
+        for (String s : str) {
+            minLen = Math.min(minLen, s.length());
+        }
+        for (int i = 0; i < minLen; i++) {
+            char ch = str[0].charAt(i);
+            for (String s : str) {
+                if (ch != s.charAt(i)) {
+                    return res.toString();
+                }
+            }
+            res.append(ch);
+        }
+        return res.toString();
+    }
+
+    // Using sorting
+    public static String longestCommonPrefix3(String[] str) {
         if (str.length == 0 || str == null) {
             return "";
         }
@@ -58,7 +80,7 @@ public class LongestCommonPrefix {
         for (int i = 0; i < size; i++) {
             str[i] = sc.next();
         }
-        String result = longestCommonPrefix(str);
+        String result = longestCommonPrefix2(str);
         if (result.equals("")) {
             System.out.println("No common prefix");
         } else {
