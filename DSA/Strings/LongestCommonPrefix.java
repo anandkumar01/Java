@@ -31,7 +31,7 @@ public class LongestCommonPrefix {
         if (str.length == 0 || str == null) {
             return "";
         }
-        StringBuilder res = new StringBuilder();
+        String res = "";
         int minLen = str[0].length();
         for (String s : str) {
             minLen = Math.min(minLen, s.length());
@@ -40,12 +40,12 @@ public class LongestCommonPrefix {
             char ch = str[0].charAt(i);
             for (String s : str) {
                 if (ch != s.charAt(i)) {
-                    return res.toString();
+                    return res;
                 }
             }
-            res.append(ch);
+            res+=(ch);
         }
-        return res.toString();
+        return res;
     }
 
     // Using sorting
